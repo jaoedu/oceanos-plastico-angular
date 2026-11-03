@@ -23,6 +23,26 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should highlight the extended submission deadline and group the three UNISANTA programs', () => {
+    for (const [language, extended, program] of [
+      ['pt', 'Prazo prorrogado', 'Programa de Pós-Graduação em Ciência e Tecnologia Ambiental'],
+      ['en', 'Deadline extended', 'Graduate Program in Environmental Science and Technology'],
+      ['es', 'Plazo prorrogado', 'Programa de Posgrado en Ciencia y Tecnología Ambiental'],
+    ] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const notice = fixture.nativeElement.querySelector('[data-submission-extension]') as HTMLElement;
+      expect(notice?.querySelector('strong')?.textContent).toContain(extended);
+      expect(notice?.querySelector('a')?.getAttribute('href')).toBe(component.submissionUrl);
+      expect(component.importantDates[0].start).toBe('2026-11-06');
+      expect(component.pageData.ui.deadlines.submission).toContain(extended);
+      expect(component.partners.slice(0, 4).every(partner => partner.category === 'organizer')).toBeTrue();
+      expect(component.partnerName(component.partners[3])).toBe(program);
+      expect(fixture.nativeElement.querySelector('#parceiros').textContent).toContain(program);
+      expect(fixture.nativeElement.querySelector('#parceiros').textContent).not.toContain('SINPLAST');
+    }
+  });
+
   it('should replace Vittia and EcoaLab with Amazonas Destination in every language', () => {
     for (const language of ['pt', 'en', 'es'] as const) {
       component.setLanguage(language);
@@ -173,7 +193,7 @@ describe('Iwppo2026Component', () => {
       expect(section.textContent).toContain(pending);
       expect(section.querySelectorAll('time').length).toBe(5);
       expect(Array.from(section.querySelectorAll('time'), time => time.getAttribute('datetime')))
-        .toEqual(['2026-11-03', '2026-11-06', '2026-11-06', '2026-11-17', '2026-11-20']);
+        .toEqual(['2026-11-06', '2026-11-06', '2026-11-06', '2026-11-17', '2026-11-20']);
       expect(section.textContent).not.toContain(component.pageData.schedule[0].activities[0].title);
     }
   });

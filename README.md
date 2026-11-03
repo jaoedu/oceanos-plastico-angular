@@ -33,6 +33,12 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.
+Os quatro primeiros cards são UNISANTA e seus três PPGs, incluindo Ciência e
+Tecnologia Ambiental, que usa a marca institucional enquanto não há arte própria.
+O prazo de submissão foi prorrogado para 06/11/2026, com aviso no topo da página.
+Os textos ficam em `ui.deadlines.submission` nos JSONs e nos fallbacks do componente;
+a data estruturada fica em `importantDates`. A janela de submissão na Doity deve
+ser atualizada separadamente pela organização.
 Amazonas Destination utiliza a imagem `src/assets/images/iwppo-2026/partners/amazonas-destination.jpeg`.
 A marca do INPA está em `src/assets/images/iwppo-2026/partners/inpa.png`,
 com referência institucional em https://www.gov.br/inpa/pt-br/marcas-do-inpa.

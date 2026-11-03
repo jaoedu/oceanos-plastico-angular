@@ -276,7 +276,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Modalidade'
     },
     deadlines: {
-      submission: 'Deadline de envio de trabalhos: até dia 03.11 (divulgação dos resultados no dia 06.11)',
+      submission: 'Prazo prorrogado: submissão de trabalhos até 06/11/2026 (divulgação dos resultados em 06/11)',
       registration: 'Inscrição no evento: até o dia 06.11 (ou enquanto durarem as inscrições)'
     },
     sections: {
@@ -355,7 +355,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Format'
     },
     deadlines: {
-      submission: 'Submission deadline: November 3 (results announced on November 6)',
+      submission: 'Deadline extended: paper submissions until November 6, 2026 (results announced on November 6)',
       registration: 'Event registration: until November 6 (or while spaces last)'
     },
     sections: {
@@ -434,7 +434,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Modalidad'
     },
     deadlines: {
-      submission: 'Fecha límite de envío de trabajos: hasta el 03.11 (resultados el 06.11)',
+      submission: 'Plazo prorrogado: envío de trabajos hasta el 06/11/2026 (resultados el 06/11)',
       registration: 'Inscripción al evento: hasta el 06.11 (o mientras haya cupos)'
     },
     sections: {
@@ -533,6 +533,13 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
       logo: 'assets/images/iwppo-2026/partners/unisanta-programas.png',
       category: 'organizer'
     },
+    {
+      name: 'Programa de Pós-Graduação em Ciência e Tecnologia Ambiental',
+      nameEn: 'Graduate Program in Environmental Science and Technology',
+      nameEs: 'Programa de Posgrado en Ciencia y Tecnología Ambiental',
+      logo: 'assets/images/iwppo-2026/partners/unisanta-programas.png',
+      category: 'organizer'
+    },
     { name: 'CAPES', logo: 'assets/images/iwppo-2026/partners/capes.png', category: 'supporter' },
     { name: 'CNPq', logo: 'assets/images/iwppo-2026/partners/cnpq.png', category: 'supporter' },
     { name: 'FAPEAL', logo: 'assets/images/iwppo-2026/partners/fapeal.png', category: 'partner' },
@@ -547,7 +554,6 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     { name: 'Club Lyon', logo: 'assets/images/iwppo-2026/partners/club-laranja.png', category: 'partner' },
     { name: 'Marinha do Brasil', logo: 'assets/images/iwppo-2026/partners/marinha2.jpeg', category: 'partner' },
     { name: 'Capitania dos Portos de Alagoas', logo: 'assets/images/iwppo-2026/partners/brasao_cpal.png', category: 'partner' },
-    { name: 'SINPLAST', logo: 'assets/images/iwppo-2026/partners/sinplast.png', category: 'partner' }
   ];
 
   languages: Language[] = ['pt', 'en', 'es'];
@@ -635,7 +641,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
       es: ['Envío de artículos', 'Comunicación de aceptación', 'Inscripción al evento', 'Realización del evento', 'o mientras haya cupos']
     }[this.currentLanguage];
     return [
-      { label: labels[0], start: '2026-11-03', end: '', pending: '', icon: 'pi-send' },
+      { label: labels[0], start: '2026-11-06', end: '', pending: '', icon: 'pi-send' },
       { label: labels[1], start: '2026-11-06', end: '', pending: '', icon: 'pi-check-circle' },
       { label: labels[2], start: '2026-11-06', end: '', pending: labels[4], icon: 'pi-clock' },
       { label: labels[3], start: this.pageData.event.startDate, end: this.pageData.event.endDate, pending: '', icon: 'pi-calendar' }

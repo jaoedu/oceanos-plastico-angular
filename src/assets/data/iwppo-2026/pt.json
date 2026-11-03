@@ -27,7 +27,7 @@
     },
     "institution": {
       "name": "Universidade Santa Cecília (UNISANTA)",
-      "program": " Programa de Pós-Graduação em Engenharia Mecânica e Programa de Pós- Graduação em Auditoria Ambiental, Portos e Governança"
+      "program": " Programa de Pós-Graduação em Engenharia Mecânica e Programa de Pós- Graduação em Auditoria Ambiental, Portos e Governança; Programa de Pós-Graduação em Ciência e Tecnologia Ambiental"
     }
   },
   "promotingInstitution": {
@@ -855,7 +855,7 @@
       "modality": "Modalidade"
     },
     "deadlines": {
-      "submission": "Deadline de envio de trabalhos: até dia 03.11 (divulgação dos resultados no dia 06.11)",
+      "submission": "Prazo prorrogado: submissão de trabalhos até 06/11/2026 (divulgação dos resultados em 06/11)",
       "registration": "Inscrição no evento: até o dia 06.11 (ou enquanto durarem as inscrições)"
     },
     "sections": {
