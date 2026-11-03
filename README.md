@@ -33,6 +33,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.
+Amazonas Destination utiliza a imagem `src/assets/images/iwppo-2026/partners/amazonas-destination.jpeg`.
 A marca do INPA está em `src/assets/images/iwppo-2026/partners/inpa.png`,
 com referência institucional em https://www.gov.br/inpa/pt-br/marcas-do-inpa.
 

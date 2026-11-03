@@ -23,6 +23,20 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should replace Vittia and EcoaLab with Amazonas Destination in every language', () => {
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const section = fixture.nativeElement.querySelector('#parceiros') as HTMLElement;
+      expect(section.textContent).not.toContain('Vittia');
+      expect(section.textContent).not.toContain('EcoaLab');
+      const image = section.querySelector('img[alt="Amazonas Destination"]');
+      expect(image).not.toBeNull();
+      expect(image?.getAttribute('src')).toBe('assets/images/iwppo-2026/partners/amazonas-destination.jpeg');
+      expect(component.partners.find(partner => partner.name === 'Amazonas Destination')?.category).toBe('partner');
+    }
+  });
+
   it('should show INPA as an event partner with its supplied logo in every language', () => {
     const name = 'Instituto Nacional de Pesquisas da Amazônia (INPA)';
     for (const language of ['pt', 'en', 'es'] as const) {
