@@ -609,8 +609,12 @@
           "type": "Opening",
           "room": "",
           "speakers": [
-            "Jesse Marques Pavão",
-            "Marília Gabriela Gondim Rezende"
+            "Jessé Marques Júnior",
+            "Marília Gabriela Gondim Resende",
+            "Geone Maia Corrêa",
+            "Silvia Ângela Teixeira Penteado",
+            "Marcos Tadeu Tavares Pacheco",
+            "Jerfeson Nepumuceno Caldas"
           ],
           "description": "Official opening ceremony of the event."
         },
@@ -899,5 +903,49 @@
       "position": "Position",
       "accessInstitutionalWebsite": "Access institutional website"
     }
+  },
+  "openingPanel": {
+    "title": "Opening panel",
+    "description": "Authorities and institutional representatives who officially open the 3rd IWPPO.",
+    "searchLabel": "Search by member, role or institution",
+    "emptyLabel": "No members found.",
+    "members": [
+      {
+        "name": "Prof. Dr. Jessé Marques Júnior",
+        "role": "Coordinator of the Oceanos de Plástico Project and president of the 3rd IWPPO",
+        "affiliation": "Projeto Oceanos de Plástico / CNPq / ONU / UNISANTA",
+        "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg"
+      },
+      {
+        "name": "Profa. Dra. Marília Gabriela Gondim Resende",
+        "role": "Coordinator of PPCASA/UFAM and vice-president of the 3rd IWPPO",
+        "affiliation": "PPCASA / UFAM",
+        "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpeg"
+      },
+      {
+        "name": "Prof. Dr. Geone Maia Corrêa",
+        "role": "Vice-rector of UFAM",
+        "affiliation": "UFAM",
+        "photo": "assets/images/iwppo-2026/people/geone-maia-correa.jpeg"
+      },
+      {
+        "name": "Profa. Dra. Silvia Ângela Teixeira Penteado",
+        "role": "Rector of UNISANTA",
+        "affiliation": "UNISANTA",
+        "photo": ""
+      },
+      {
+        "name": "Prof. Dr. Marcos Tadeu Tavares Pacheco",
+        "role": "General coordinator of the Graduate Program",
+        "affiliation": "UNISANTA",
+        "photo": "assets/images/iwppo-2026/people/marcos-tadeu.jpeg"
+      },
+      {
+        "name": "Jerfeson Nepumuceno Caldas",
+        "role": "Anvisa coordinator for health surveillance at ports, airports and borders in the North Region",
+        "affiliation": "Anvisa — Região Norte",
+        "photo": "assets/images/iwppo-2026/people/jerfeson-nepumuceno-caldas.jpeg"
+      }
+    ]
   }
 }

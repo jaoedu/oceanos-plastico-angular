@@ -609,8 +609,12 @@
           "type": "Apertura",
           "room": "",
           "speakers": [
-            "Jesse Marques Pavão",
-            "Marília Gabriela Gondim Rezende"
+            "Jessé Marques Júnior",
+            "Marília Gabriela Gondim Resende",
+            "Geone Maia Corrêa",
+            "Silvia Ângela Teixeira Penteado",
+            "Marcos Tadeu Tavares Pacheco",
+            "Jerfeson Nepumuceno Caldas"
           ],
           "description": "Ceremonia oficial de apertura del evento."
         },
@@ -900,5 +904,49 @@
       "position": "Cargo",
       "accessInstitutionalWebsite": "Acceder al sitio institucional"
     }
+  },
+  "openingPanel": {
+    "title": "Mesa de apertura",
+    "description": "Autoridades y representantes institucionales que inauguran oficialmente el 3rd IWPPO.",
+    "searchLabel": "Buscar integrante, cargo o institución",
+    "emptyLabel": "No se encontraron integrantes.",
+    "members": [
+      {
+        "name": "Prof. Dr. Jessé Marques Júnior",
+        "role": "Coordinador del Proyecto Oceanos de Plástico y presidente del 3rd IWPPO",
+        "affiliation": "Projeto Oceanos de Plástico / CNPq / ONU / UNISANTA",
+        "photo": "assets/images/iwppo-2026/people/jesse-marques.jpg"
+      },
+      {
+        "name": "Profa. Dra. Marília Gabriela Gondim Resende",
+        "role": "Coordinadora del PPCASA/UFAM y vicepresidenta del 3rd IWPPO",
+        "affiliation": "PPCASA / UFAM",
+        "photo": "assets/images/iwppo-2026/people/marilia-gabriela.jpeg"
+      },
+      {
+        "name": "Prof. Dr. Geone Maia Corrêa",
+        "role": "Vicerrector de la UFAM",
+        "affiliation": "UFAM",
+        "photo": "assets/images/iwppo-2026/people/geone-maia-correa.jpeg"
+      },
+      {
+        "name": "Profa. Dra. Silvia Ângela Teixeira Penteado",
+        "role": "Rectora de la UNISANTA",
+        "affiliation": "UNISANTA",
+        "photo": ""
+      },
+      {
+        "name": "Prof. Dr. Marcos Tadeu Tavares Pacheco",
+        "role": "Coordinador general del Programa de Posgrado",
+        "affiliation": "UNISANTA",
+        "photo": "assets/images/iwppo-2026/people/marcos-tadeu.jpeg"
+      },
+      {
+        "name": "Jerfeson Nepumuceno Caldas",
+        "role": "Coordinador de Vigilancia Sanitaria de Puertos, Aeropuertos y Fronteras de Anvisa en la Región Norte",
+        "affiliation": "Anvisa — Região Norte",
+        "photo": "assets/images/iwppo-2026/people/jerfeson-nepumuceno-caldas.jpeg"
+      }
+    ]
   }
 }

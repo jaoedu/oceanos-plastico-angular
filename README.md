@@ -32,6 +32,11 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+A mesa de abertura do IWPPO 2026 fica em `openingPanel` nos três arquivos de
+idioma e acompanha os participantes da abertura de 17/11 em `schedule`.
+A seção permite buscar nome, cargo ou instituição, ignorando acentos.
+Fotos existentes são reutilizadas; integrantes sem foto usam um ícone provisório.
+
 Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.
 Os quatro primeiros cards são UNISANTA e seus três PPGs, incluindo Ciência e
 Tecnologia Ambiental, que usa a marca institucional enquanto não há arte própria.

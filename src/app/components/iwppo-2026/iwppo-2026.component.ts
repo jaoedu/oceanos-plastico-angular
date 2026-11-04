@@ -250,6 +250,13 @@ interface IwppoPageData {
   organizingCommittee: Person[];
   scientificCommittee: Person[];
   speakers: Person[];
+  openingPanel: {
+    title: string;
+    description: string;
+    searchLabel: string;
+    emptyLabel: string;
+    members: Array<{ name: string; role: string; affiliation: string; photo: string }>;
+  };
 
   schedule: ScheduleDay[];
 }
@@ -604,6 +611,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
 
   setLanguage(language: Language): void {
     this.currentLanguage = language;
+    this.openingPanelQuery = '';
 
     const selectedData = data[language];
 
@@ -632,6 +640,15 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
       en: { title: 'Countdown', dates: 'Important dates', units: ['Days', 'Hours', 'Minutes', 'Seconds'], started: 'III IWPPO has started!' },
       es: { title: 'Cuenta regresiva', dates: 'Fechas importantes', units: ['Días', 'Horas', 'Minutos', 'Segundos'], started: '¡El III IWPPO ha comenzado!' }
     }[this.currentLanguage];
+  }
+
+  openingPanelQuery = '';
+
+  get filteredOpeningPanelMembers() {
+    const normalize = (value: string) => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+    const query = normalize(this.openingPanelQuery.trim());
+    return this.pageData.openingPanel.members.filter(member =>
+      normalize(`${member.name} ${member.role} ${member.affiliation}`).includes(query));
   }
 
   get importantDates() {

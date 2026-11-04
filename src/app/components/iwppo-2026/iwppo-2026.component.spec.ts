@@ -23,6 +23,43 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show the six opening panel members and filter names, roles and institutions', () => {
+    const names = ['Jessé Marques Júnior', 'Marília Gabriela Gondim Resende', 'Geone Maia Corrêa',
+      'Silvia Ângela Teixeira Penteado', 'Marcos Tadeu Tavares Pacheco', 'Jerfeson Nepumuceno Caldas'];
+    for (const [language, title] of [['pt', 'Mesa de abertura'], ['en', 'Opening panel'], ['es', 'Mesa de apertura']] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const section = fixture.nativeElement.querySelector('#mesa-de-abertura') as HTMLElement;
+      expect(section?.querySelector('h2')?.textContent).toContain(title);
+      expect(section?.querySelectorAll('article').length).toBe(6);
+      names.forEach(name => expect(section?.textContent).toContain(name));
+      const opening = component.pageData.schedule.find(day => day.date === '2026-11-17')!.activities[2];
+      names.forEach(name => expect(opening.speakers).toContain(name));
+      expect(section?.querySelectorAll('img').length).toBe(5);
+      expect(section?.querySelector('img[alt="Prof. Dr. Geone Maia Corrêa"]')?.getAttribute('src'))
+        .toBe('assets/images/iwppo-2026/people/geone-maia-correa.jpeg');
+      expect(section?.querySelector('img[alt="Jerfeson Nepumuceno Caldas"]')?.getAttribute('src'))
+        .toBe('assets/images/iwppo-2026/people/jerfeson-nepumuceno-caldas.jpeg');
+      const search = section?.querySelector('input') as HTMLInputElement;
+      expect(search?.getAttribute('aria-label')).toBeTruthy();
+      for (const term of ['geone', 'ANVISA', 'JESSE']) {
+        search.value = term;
+        search.dispatchEvent(new Event('input'));
+        fixture.detectChanges();
+        expect(section.querySelectorAll('article').length).toBe(1);
+      }
+      search.value = 'no matching member';
+      search.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(section.querySelectorAll('article').length).toBe(0);
+      expect(section.querySelector('[role="status"]')?.textContent?.trim()).toBeTruthy();
+      search.value = '';
+      search.dispatchEvent(new Event('input'));
+      fixture.detectChanges();
+      expect(section.querySelectorAll('article').length).toBe(6);
+    }
+  });
+
   it('should highlight the extended submission deadline and group the three UNISANTA programs', () => {
     for (const [language, extended, program] of [
       ['pt', 'Prazo prorrogado', 'Programa de Pós-Graduação em Ciência e Tecnologia Ambiental'],

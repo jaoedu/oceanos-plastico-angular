@@ -507,6 +507,36 @@
     </div>
   </section>
 
+  <!-- MESA DE ABERTURA -->
+  <section id="mesa-de-abertura" aria-labelledby="opening-panel-title" class="py-24 bg-[#F7F3EA]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="opening-panel-title" class="text-3xl md:text-5xl font-black text-[#063A4A] tracking-[-0.04em]">{{ pageData.openingPanel.title }}</h2>
+      <p class="mt-5 text-gray-700 leading-relaxed">{{ pageData.openingPanel.description }}</p>
+      <label for="opening-panel-search" class="block mt-8 mb-2 font-bold text-[#063A4A]">{{ pageData.openingPanel.searchLabel }}</label>
+      <input #openingSearch id="opening-panel-search" type="search" [value]="openingPanelQuery"
+        [attr.aria-label]="pageData.openingPanel.searchLabel" (input)="openingPanelQuery = openingSearch.value"
+        class="w-full rounded-2xl border border-[#9A7600] bg-white px-5 py-3 mb-8 focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-2 focus-visible:outline-[#0F7F5F]" />
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article *ngFor="let member of filteredOpeningPanelMembers; trackBy: trackByName"
+          class="bg-white rounded-[2rem] border border-[#E6DDC8] shadow-sm overflow-hidden">
+          <img *ngIf="member.photo; else openingPortraitPlaceholder" [src]="member.photo" [alt]="member.name"
+            loading="lazy" (error)="useFallbackPhoto($event)" class="w-full h-72 object-cover object-top bg-[#DCE7E1]" />
+          <ng-template #openingPortraitPlaceholder>
+            <div class="h-72 bg-[#DCE7E1] flex items-center justify-center" aria-hidden="true">
+              <i class="pi pi-user text-7xl text-[#063A4A]"></i>
+            </div>
+          </ng-template>
+          <div class="p-6">
+            <h3 class="text-xl font-black text-[#063A4A] leading-tight">{{ member.name }}</h3>
+            <p class="text-[#063A4A] mt-3 leading-relaxed">{{ member.role }}</p>
+            <p class="text-sm text-[#9A7600] font-bold mt-3">{{ member.affiliation }}</p>
+          </div>
+        </article>
+      </div>
+      <p *ngIf="filteredOpeningPanelMembers.length === 0" role="status" class="mt-6 text-[#063A4A]">{{ pageData.openingPanel.emptyLabel }}</p>
+    </div>
+  </section>
+
   <!-- PALESTRANTES -->
   <section id="palestrantes" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
