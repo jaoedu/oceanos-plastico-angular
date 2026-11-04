@@ -513,24 +513,10 @@
       "lattes": ""
     },
     {
-      "name": "Brendan P. Kelaher",
-      "nationality": "Foreign",
-      "country": "",
-      "photo": "assets/images/iwppo-2026/people/brendan-kelaher.jpg",
-      "lattes": ""
-    },
-    {
       "name": "Scott Wilson",
       "nationality": "Foreign",
       "country": "",
       "photo": "assets/images/iwppo-2026/people/scott-wilson.jpg",
-      "lattes": ""
-    },
-    {
-      "name": "Fernando Miguel Granja Martins",
-      "nationality": "Foreign",
-      "country": "",
-      "photo": "assets/images/iwppo-2026/people/fernando-miguel-granja-martins.jpg",
       "lattes": ""
     },
     {
@@ -728,8 +714,7 @@
           "type": "Round table",
           "room": "",
           "speakers": [
-            "Alireza Moghayedi",
-            "Brendan P. Kelaher"
+            "Alireza Moghayedi"
           ],
           "description": "Presentation of innovations for collecting plastics from the oceans and transforming these materials into new raw materials.",
           "moderator": {

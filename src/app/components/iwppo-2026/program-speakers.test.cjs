@@ -9,7 +9,7 @@ for (const language of ['pt', 'en', 'es']) {
       `../../../assets/data/iwppo-2026/${language}.json`), 'utf8'));
     const program = JSON.stringify({ speakers: data.speakers, schedule: data.schedule });
     for (const name of ['Feni Dalano', 'Alexandre Urban', 'Carlos Alberto Cioce Sampaio',
-      'Marcos Paulo', 'Robson Guimarães']) {
+      'Marcos Paulo', 'Robson Guimarães', 'Brendan P. Kelaher', 'Fernando Miguel']) {
       assert.ok(!program.includes(name), `${name} must be absent`);
     }
     assert.ok(data.speakers.length > 0);
