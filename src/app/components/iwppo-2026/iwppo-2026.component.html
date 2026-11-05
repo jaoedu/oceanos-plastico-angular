@@ -568,6 +568,7 @@
           <div class="relative overflow-hidden">
             <img
               [src]="speaker.photo"
+              [style.object-position]="speaker.photoPosition || 'center'"
               [alt]="speaker.name"
               (error)="useFallbackPhoto($event)"
               class="w-full h-72 object-cover bg-[#DCE7E1] group-hover:scale-105 transition duration-500"

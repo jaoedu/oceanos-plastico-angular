@@ -16,6 +16,7 @@ interface Person {
   nationality?: string;
   country: string;
   photo: string;
+  photoPosition?: string;
   lattes: string;
   role?: string;
   affiliation?: string;

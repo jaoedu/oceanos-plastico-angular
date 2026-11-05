@@ -23,6 +23,25 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should show João Vitor Campos e Silva with his photo and translated talk without inventing a schedule', () => {
+    const name = 'João Vitor Campos e Silva';
+    for (const [language, title] of [
+      ['pt', 'Manejo pesqueiro e biodiversidade aquática frente às mudanças globais'],
+      ['en', 'Fisheries management and aquatic biodiversity in the face of global change'],
+      ['es', 'Manejo pesquero y biodiversidad acuática frente a los cambios globales'],
+    ] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const cards = Array.from(fixture.nativeElement.querySelectorAll('#palestrantes article')) as HTMLElement[];
+      const card = cards.find(card => card.querySelector('h3')?.textContent?.trim() === name);
+      expect(card?.textContent).toContain(title);
+      expect(card?.querySelector('img')?.getAttribute('src'))
+        .toBe('assets/images/iwppo-2026/people/joao-vitor-campos-silva.jpeg');
+      expect(component.pageData.speakers.filter(speaker => speaker.name === name).length).toBe(1);
+      expect(component.pageData.schedule.some(day => day.activities.some(activity => activity.speakers.includes(name)))).toBeFalse();
+    }
+  });
+
   it('should show the six opening panel members and filter names, roles and institutions', () => {
     const names = ['Jessé Marques Júnior', 'Marília Gabriela Gondim Resende', 'Geone Maia Corrêa',
       'Silvia Ângela Teixeira Penteado', 'Marcos Tadeu Tavares Pacheco', 'Jerfeson Nepumuceno Caldas'];

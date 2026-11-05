@@ -32,6 +32,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Running unit tests
 
+João Vitor Campos e Silva está cadastrado em `speakers` nos três idiomas, com
+foto e título da palestra; o dia e horário aguardam definição da organização.
+`photoPosition` permite ajustar o enquadramento de fotos horizontais nos cards.
+
 A mesa de abertura do IWPPO 2026 fica em `openingPanel` nos três arquivos de
 idioma e acompanha os participantes da abertura de 17/11 em `schedule`.
 A seção permite buscar nome, cargo ou instituição, ignorando acentos.
