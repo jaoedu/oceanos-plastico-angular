@@ -39,6 +39,7 @@ foto e título da palestra; o dia e horário aguardam definição da organizaç�
 A mesa de abertura do IWPPO 2026 fica em `openingPanel` nos três arquivos de
 idioma e acompanha os participantes da abertura de 17/11 em `schedule`.
 A seção permite buscar nome, cargo ou instituição, ignorando acentos.
+As fotos da mesa usam `object-contain` para preservar a imagem inteira sem cortar rostos.
 Fotos existentes são reutilizadas; integrantes sem foto usam um ícone provisório.
 
 Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.

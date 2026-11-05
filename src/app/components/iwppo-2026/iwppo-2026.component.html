@@ -520,7 +520,7 @@
         <article *ngFor="let member of filteredOpeningPanelMembers; trackBy: trackByName"
           class="bg-white rounded-[2rem] border border-[#E6DDC8] shadow-sm overflow-hidden">
           <img *ngIf="member.photo; else openingPortraitPlaceholder" [src]="member.photo" [alt]="member.name"
-            loading="lazy" (error)="useFallbackPhoto($event)" class="w-full h-72 object-cover object-top bg-[#DCE7E1]" />
+            loading="lazy" (error)="useFallbackPhoto($event)" class="w-full h-72 object-contain object-center bg-[#DCE7E1]" />
           <ng-template #openingPortraitPlaceholder>
             <div class="h-72 bg-[#DCE7E1] flex items-center justify-center" aria-hidden="true">
               <i class="pi pi-user text-7xl text-[#063A4A]"></i>

@@ -23,6 +23,19 @@ describe('Iwppo2026Component', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should display opening panel portraits without cropping at mobile and desktop card widths', () => {
+    const section = fixture.nativeElement.querySelector('#mesa-de-abertura') as HTMLElement;
+    const portraits = Array.from(section.querySelectorAll('article img')) as HTMLImageElement[];
+    expect(portraits.length).toBe(5);
+    for (const width of [280, 370]) {
+      portraits.forEach(portrait => {
+        portrait.style.width = `${width}px`;
+        expect(getComputedStyle(portrait).objectFit).toBe('contain');
+        expect(portrait.alt).toBeTruthy();
+      });
+    }
+  });
+
   it('should show João Vitor Campos e Silva with his photo and translated talk without inventing a schedule', () => {
     const name = 'João Vitor Campos e Silva';
     for (const [language, title] of [
