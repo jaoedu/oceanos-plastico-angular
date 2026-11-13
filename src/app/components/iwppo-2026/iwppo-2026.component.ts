@@ -284,7 +284,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Modalidade'
     },
     deadlines: {
-      submission: 'Prazo prorrogado: submissão de trabalhos até 06/11/2026 (divulgação dos resultados em 06/11)',
+      submission: 'Prazo prorrogado: submissão de trabalhos até 06/11/2026 (divulgação dos resultados em 15/11)',
       registration: 'Inscrição no evento: até o dia 06.11 (ou enquanto durarem as inscrições)'
     },
     sections: {
@@ -363,7 +363,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Format'
     },
     deadlines: {
-      submission: 'Deadline extended: paper submissions until November 6, 2026 (results announced on November 6)',
+      submission: 'Deadline extended: paper submissions until November 6, 2026 (results announced on November 15)',
       registration: 'Event registration: until November 6 (or while spaces last)'
     },
     sections: {
@@ -442,7 +442,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       modality: 'Modalidad'
     },
     deadlines: {
-      submission: 'Plazo prorrogado: envío de trabajos hasta el 06/11/2026 (resultados el 06/11)',
+      submission: 'Plazo prorrogado: envío de trabajos hasta el 06/11/2026 (resultados el 15/11)',
       registration: 'Inscripción al evento: hasta el 06.11 (o mientras haya cupos)'
     },
     sections: {
@@ -660,7 +660,7 @@ export class Iwppo2026Component implements OnInit, AfterViewInit, OnDestroy {
     }[this.currentLanguage];
     return [
       { label: labels[0], start: '2026-11-06', end: '', pending: '', icon: 'pi-send' },
-      { label: labels[1], start: '2026-11-06', end: '', pending: '', icon: 'pi-check-circle' },
+      { label: labels[1], start: '2026-11-15', end: '', pending: '', icon: 'pi-check-circle' },
       { label: labels[2], start: '2026-11-06', end: '', pending: labels[4], icon: 'pi-clock' },
       { label: labels[3], start: this.pageData.event.startDate, end: this.pageData.event.endDate, pending: '', icon: 'pi-calendar' }
     ];

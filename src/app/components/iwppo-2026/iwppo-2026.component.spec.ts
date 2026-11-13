@@ -262,7 +262,7 @@ describe('Iwppo2026Component', () => {
       expect(section.textContent).toContain(pending);
       expect(section.querySelectorAll('time').length).toBe(5);
       expect(Array.from(section.querySelectorAll('time'), time => time.getAttribute('datetime')))
-        .toEqual(['2026-11-06', '2026-11-06', '2026-11-06', '2026-11-17', '2026-11-20']);
+        .toEqual(['2026-11-06', '2026-11-15', '2026-11-06', '2026-11-17', '2026-11-20']);
       expect(section.textContent).not.toContain(component.pageData.schedule[0].activities[0].title);
     }
   });

@@ -46,6 +46,7 @@ Os parceiros do IWPPO 2026 ficam em `Iwppo2026Component.partners`.
 Os quatro primeiros cards são UNISANTA e seus três PPGs, incluindo Ciência e
 Tecnologia Ambiental, que usa a marca institucional enquanto não há arte própria.
 O prazo de submissão foi prorrogado para 06/11/2026, com aviso no topo da página.
+A divulgação dos resultados está prevista para 15/11/2026.
 Os textos ficam em `ui.deadlines.submission` nos JSONs e nos fallbacks do componente;
 a data estruturada fica em `importantDates`. A janela de submissão na Doity deve
 ser atualizada separadamente pela organização.
