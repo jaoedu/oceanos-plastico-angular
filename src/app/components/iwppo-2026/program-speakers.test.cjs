@@ -32,6 +32,8 @@ for (const language of ['pt', 'en', 'es']) {
     assert.ok(schedule[1].activities[1].speakers.includes('João Vitor Campos e Silva'));
     assert.equal(schedule[0].activities[2].moderator.name, 'Kátia Viana Cavalcante');
     assert.equal(schedule[1].activities[6].moderator.name, 'Santiago Linório Ferreyra Ramos');
+    const centralAuditorium = { pt: 'Auditório Central', en: 'Central Auditorium', es: 'Auditorio Central' };
+    assert.ok(schedule[2].activities.every(activity => activity.room === centralAuditorium[language]));
   });
 
   test(`shared profiles show their IWPPO 2025 Lattes links in ${language}`, () => {

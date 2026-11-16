@@ -785,7 +785,7 @@
           "time": "11:00",
           "title": "Apresentações orais dos trabalhos",
           "type": "Sessão técnica",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [],
           "description": "Sessão de apresentação de pesquisas sobre poluição plástica.",
           "presentationTitles": []
@@ -828,7 +828,7 @@
           "time": "16:00",
           "title": "Apresentações orais dos trabalhos",
           "type": "Sessão técnica",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [],
           "description": "Sessão de apresentação de pesquisas sobre poluição plástica.",
           "presentationTitles": []

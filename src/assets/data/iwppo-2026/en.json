@@ -786,7 +786,7 @@
           "time": "11:00",
           "title": "Oral research presentations",
           "type": "Technical session",
-          "room": "",
+          "room": "Central Auditorium",
           "speakers": [],
           "description": "Session for research presentations on plastic pollution.",
           "presentationTitles": []
@@ -829,7 +829,7 @@
           "time": "16:00",
           "title": "Oral research presentations",
           "type": "Technical session",
-          "room": "",
+          "room": "Central Auditorium",
           "speakers": [],
           "description": "Session for research presentations on plastic pollution.",
           "presentationTitles": []
