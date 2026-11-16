@@ -328,6 +328,13 @@
   ],
   "scientificCommittee": [
     {
+      "name": "Alessandro Sarmento Cavalcanti",
+      "nationality": "Brazilian",
+      "country": "Brazil",
+      "photo": "assets/images/equipe/alessandro.png",
+      "lattes": "https://lattes.cnpq.br/7440453632345842"
+    },
+    {
       "name": "Jarcilene Silva de Almeida",
       "nationality": "Brazilian",
       "country": "Brazil",

@@ -39,6 +39,7 @@ for (const language of ['pt', 'en', 'es']) {
     for (const [people, name, id] of [
       [data.organizingCommittee, 'Victoria Camille', '0462311949230820'],
       [data.organizingCommittee, 'Alessandro Sarmento Cavalcanti', '7440453632345842'],
+      [data.scientificCommittee, 'Alessandro Sarmento Cavalcanti', '7440453632345842'],
       [data.speakers, 'Letícia Anderson', '5902741462403490'],
       [data.openingPanel.members, 'Prof. Dr. Jessé Marques Júnior', '2811263859126204'],
     ]) {
