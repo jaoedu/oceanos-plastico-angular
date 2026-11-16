@@ -497,20 +497,6 @@
       "lattes": "http://lattes.cnpq.br/2080628833884538"
     },
     {
-      "name": "Richard James Ladle",
-      "nationality": "Reino Unido",
-      "country": "Reino Unido",
-      "photo": "assets/images/iwppo-2026/people/richard-james-ladle.jpg",
-      "lattes": "http://lattes.cnpq.br/9442171708024416"
-    },
-    {
-      "name": "Alireza Moghayedi",
-      "nationality": "Estrangeiro",
-      "country": "",
-      "photo": "assets/images/iwppo-2026/people/alireza-moghayedi.jpg",
-      "lattes": ""
-    },
-    {
       "name": "Scott Wilson",
       "nationality": "Estrangeiro",
       "country": "",
@@ -596,17 +582,19 @@
           "time": "09:00",
           "title": "Cine Ambiental",
           "type": "Outro",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [
-            "Jesse Marques Pavão"
+            "Jessé Marques Júnior",
+            "Silvana Heloísa Ferreira Cruz",
+            "Erivelton Silva Souza"
           ],
           "description": "Iniciativa educativa voltada à conscientização de alunos da rede básica de Manaus sobre a preservação do meio ambiente e os impactos da poluição plástica em rios, lagoas e oceanos."
         },
         {
-          "time": "09:00",
-          "title": "Credenciamento",
+          "time": "14:30",
+          "title": "Credenciamento e Receptivo",
           "type": "Credenciamento",
-          "room": "",
+          "room": "Foyer Principal",
           "speakers": [],
           "description": "Momento de entrega do kit aos congressistas."
         },
@@ -614,7 +602,7 @@
           "time": "15:00",
           "title": "Abertura Oficial do III IWPPO",
           "type": "Abertura",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [
             "Jessé Marques Júnior",
             "Marília Gabriela Gondim Resende",
@@ -623,17 +611,7 @@
             "Marcos Tadeu Tavares Pacheco",
             "Jerfeson Nepumuceno Caldas"
           ],
-          "description": "Cerimônia oficial de abertura do evento."
-        },
-        {
-          "time": "15:30",
-          "title": "Palestra Magna de Abertura: O Desafio Global da Poluição Plástica e os Compromissos na Pan-Amazônia",
-          "type": "Palestra",
-          "room": "",
-          "speakers": [
-            "Henrique dos Santos Pereira"
-          ],
-          "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia.",
+          "description": "Cerimônia oficial de abertura do evento.",
           "moderator": {
             "name": "Kátia Viana Cavalcante",
             "affiliation": "PPGCASA/PROFCIAMB/UFAM",
@@ -641,15 +619,25 @@
           }
         },
         {
-          "time": "16:30",
-          "title": "Apresentação Cultural",
+          "time": "15:45",
+          "title": "Palestra Magna de Abertura: O Desafio Global da Poluição Plástica e os Compromissos na Pan-Amazônia",
+          "type": "Palestra",
+          "room": "Auditório Central",
+          "speakers": [
+            "Henrique dos Santos Pereira"
+          ],
+          "description": "A palestra abordará o grave problema da poluição plástica, destacando seus impactos globais e regionais, especialmente na Pan-Amazônia."
+        },
+        {
+          "time": "16:45",
+          "title": "Apresentação Cultural de Boas-Vindas",
           "type": "Abertura",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [],
           "description": "Apresentação cultural conectando cultura amazônica e preservação ambiental."
         },
         {
-          "time": "17:00",
+          "time": "Horário a definir",
           "title": "Coffee Break de Abertura",
           "type": "Abertura",
           "room": "",
@@ -664,13 +652,13 @@
       "activities": [
         {
           "time": "09:30",
-          "title": "Sala 1 Painel: Evidências científicas sobre impactos da poluição plástica na Pan-Amazônia",
+          "title": "Palestras temáticas do IWPPO",
           "type": "Painel",
           "room": "Sala 1",
           "speakers": [
             "José Eduardo Martinelli Filho",
             "Fabian Sá",
-            "Jemilli Castiglioni Viaggi"
+            "Caio Rodrigues Nobre"
           ],
           "description": "Apresentação de pesquisas recentes sobre impactos da poluição plástica na Pan-Amazônia, incluindo contaminação de rios, solos, ecossistemas locais e efeitos sobre biodiversidade e comunidades ribeirinhas.",
           "moderator": {
@@ -681,14 +669,15 @@
         },
         {
           "time": "09:30",
-          "title": "Sala 2 Painel: Monitoramento remoto, bioindicadores e rastreabilidade de resíduos",
+          "title": "Palestras temáticas do IWPPO",
           "type": "Painel",
           "room": "Sala 2",
           "speakers": [
-            "Jesse Marques Pavão",
-            "Scott Wilson"
+            "João Vitor Campos e Silva",
+            "Genilson Pereira Santana",
+            "Deivison Carvalho Molinari"
           ],
-          "description": "Discussão sobre tecnologias e metodologias para monitorar a poluição plástica, incluindo satélites e drones.",
+          "description": "Biotecnologia e Economia Circular: Inovação e Soluções Sustentáveis para a Saúde dos Ecossistemas Aquáticos",
           "moderator": {
             "name": "Mônica Alves de Vasconcelos",
             "affiliation": "CENSIPAM",
@@ -696,20 +685,12 @@
           }
         },
         {
-          "time": "10:40",
-          "title": "Coffee Break",
-          "type": "Outro",
-          "room": "",
-          "speakers": [],
-          "description": "Momento de interação e networking entre os participantes."
-        },
-        {
           "time": "11:00",
-          "title": "Sessão técnica de jovens pesquisadores: apresentação de pôsteres",
-          "type": "Apresentação de pôsteres",
+          "title": "Apresentações orais dos trabalhos",
+          "type": "Sessão técnica",
           "room": "",
           "speakers": [],
-          "description": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções."
+          "description": "Sessão de apresentação de pesquisas sobre poluição plástica."
         },
         {
           "time": "12:00",
@@ -720,30 +701,16 @@
           "description": "Intervalo para almoço."
         },
         {
-          "time": "13:00",
-          "title": "Keynote Internacional: Tecnologias emergentes de captura e reciclagem",
-          "type": "Mesa redonda",
-          "room": "",
-          "speakers": [
-            "Alireza Moghayedi"
-          ],
-          "description": "Apresentação de inovações para coleta de plásticos dos oceanos e transformação desses materiais em novas matérias-primas.",
-          "moderator": {
-            "name": "Santiago Linório Ferreyra Ramos",
-            "affiliation": "ICET/PPGCASA/UFAM",
-            "label": "Moderador"
-          }
-        },
-        {
           "time": "14:00",
-          "title": "Painel 1: Biorremediação, enzimas e startups de bioplásticos",
+          "title": "Painel 1: Poluição plástica nos ecossistemas aquáticos: impactos, desafios e perspectivas socioambientais",
           "type": "Painel",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [
-            "Marcell Mariano Correa Maceno",
-            "Genilson Pereira Santana"
+            "Camilo Dias Seabra Pereira (remoto)",
+            "José Eduardo Martinelli Filho",
+            "Clemilson Marques Batista"
           ],
-          "description": "Discussão sobre biorremediação, uso de enzimas na degradação de plásticos e inovações de startups focadas em bioplásticos.",
+          "description": "",
           "moderator": {
             "name": "Maria Teresa Gomes Lopes",
             "affiliation": "PPGCASA/PPGATR/PPGCIFA/UFAM",
@@ -752,20 +719,12 @@
         },
         {
           "time": "15:00",
-          "title": "Coffee Break",
-          "type": "Outro",
-          "room": "",
-          "speakers": [],
-          "description": "Momento de interação e networking entre os participantes."
-        },
-        {
-          "time": "15:30",
           "title": "Painel 2: Economia circular aplicada a bacias hidrográficas e oceânicas",
           "type": "Painel",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [
             "Ian Vázquez Rowe",
-            "Deivison Carvalho Molinari"
+            "Thiago Anthony Soares Lima"
           ],
           "description": "Debate sobre economia circular como estratégia para gestão sustentável de bacias hidrográficas e oceânicas.",
           "moderator": {
@@ -775,12 +734,17 @@
           }
         },
         {
-          "time": "16:30",
-          "title": "Apresentação Cultural",
-          "type": "Outro",
+          "time": "16:00",
+          "title": "Apresentações orais dos trabalhos",
+          "type": "Sessão técnica",
           "room": "",
           "speakers": [],
-          "description": "Apresentação teatral sobre poluição plástica, cultura local e preservação ambiental na Pan-Amazônia."
+          "description": "Sessão de apresentação de pesquisas sobre poluição plástica.",
+          "moderator": {
+            "name": "Santiago Linório Ferreyra Ramos",
+            "affiliation": "ICET/PPGCASA/UFAM",
+            "label": "Moderador"
+          }
         }
       ]
     },
@@ -789,19 +753,63 @@
       "dayLabel": "19 de novembro de 2026",
       "activities": [
         {
-          "time": "Horário a definir",
-          "title": "Os desafios e perspectivas de pesquisar os efeitos de microplásticos na gestação",
+          "time": "09:30",
+          "title": "Microplásticos em um Oceano Conectado: Da Saúde Humana aos Impactos na Biodiversidade e aos Desafios da Conservação Marinha",
           "type": "Palestra",
-          "room": "",
+          "room": "Auditório Central",
           "speakers": [
-            "Lays Marques"
+            "Lays Xavier Marques",
+            "Marcell Mariano Correa Maceno"
           ],
-          "description": "Palestra sobre os desafios e as perspectivas de pesquisar os efeitos dos microplásticos na gestação.",
-          "moderator": {
-            "name": "Jessé Marques",
-            "affiliation": "UNISANTA",
-            "label": "Moderador"
-          }
+          "description": ""
+        },
+        {
+          "time": "11:00",
+          "title": "Apresentações orais dos trabalhos",
+          "type": "Sessão técnica",
+          "room": "",
+          "speakers": [],
+          "description": "Sessão de apresentação de pesquisas sobre poluição plástica."
+        },
+        {
+          "time": "13:00",
+          "title": "Ciência, Governança Oceânica e Inovação no Combate à Poluição por Plásticos",
+          "type": "Painel",
+          "room": "Auditório Central",
+          "speakers": [
+            "Paloma Kachel Gusso Choueri",
+            "Jemilli Castiglioni Viaggi",
+            "Ana Filipa da Silva Bessa"
+          ],
+          "description": ""
+        },
+        {
+          "time": "14:30",
+          "title": "Oceanos e cidades: poluição plástica, avaliação ambiental e caminhos para a sustentabilidade",
+          "type": "Painel",
+          "room": "Auditório Central",
+          "speakers": [
+            "Jessé Marques Júnior",
+            "Scott Wilson",
+            "Bankole Ositadimma Awuzie"
+          ],
+          "description": ""
+        },
+        {
+          "time": "16:00",
+          "title": "Apresentações orais dos trabalhos",
+          "type": "Sessão técnica",
+          "room": "",
+          "speakers": [],
+          "description": "Sessão de apresentação de pesquisas sobre poluição plástica."
+        },
+        {
+          "time": "17:00",
+          "title": "Carta para Manaus: compromissos e legado IWPPO",
+          "type": "Compromisso IWPPO 2026",
+          "room": "Auditório Central",
+          "speakers": [],
+          "description": ""
         }
       ]
     },

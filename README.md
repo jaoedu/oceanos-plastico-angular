@@ -33,7 +33,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running unit tests
 
 João Vitor Campos e Silva está cadastrado em `speakers` nos três idiomas, com
-foto e título da palestra; o dia e horário aguardam definição da organização.
+foto e título da palestra. Na programação oficial, participa das palestras
+temáticas de 18/11, às 09h30, na Sala 2.
 `photoPosition` permite ajustar o enquadramento de fotos horizontais nos cards.
 
 A mesa de abertura do IWPPO 2026 fica em `openingPanel` nos três arquivos de
@@ -56,17 +57,17 @@ com referência institucional em https://www.gov.br/inpa/pt-br/marcas-do-inpa.
 
 As moderações do IWPPO 2026 ficam em `schedule[].activities[].moderator`
 nos três arquivos de idioma, com nome, afiliação e rótulo traduzido.
-O teste do componente verifica a associação das sete moderações às atividades.
-Genilson Pereira Santana e Deivison Carvalho Molinari são palestrantes dos painéis
-1 e 2; suas fotos ficam em `src/assets/images/iwppo-2026/people/`.
-Esses painéis têm Maria Teresa Gomes Lopes e Francimara Souza da Costa como
+O teste do componente verifica a associação das seis moderações às atividades.
+Genilson Pereira Santana e Deivison Carvalho Molinari participam das palestras
+temáticas na Sala 2; suas fotos ficam em `src/assets/images/iwppo-2026/people/`.
+Os painéis 1 e 2 têm Maria Teresa Gomes Lopes e Francimara Souza da Costa como
 moderadoras, respectivamente.
 
 A seção de localização do IWPPO 2026 apresenta o endereço da UFAM no Setor Sul,
 mapa e link para o Google Maps. O endereço fica em `hostInstitution.address`
 nos três arquivos de idioma; ao alterá-lo, atualize também os URLs do mapa no template.
 
-Para validar a retirada de palestrantes da programação nos três idiomas:
+Para validar os horários de 17 a 19/11 e a retirada de palestrantes nos três idiomas:
 `node --test src/app/components/iwppo-2026/program-speakers.test.cjs`.
 
 Os cards da Aura Amazônia aparecem na atividade de experiências imersivas de

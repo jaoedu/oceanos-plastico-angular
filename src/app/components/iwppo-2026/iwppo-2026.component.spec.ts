@@ -36,7 +36,7 @@ describe('Iwppo2026Component', () => {
     }
   });
 
-  it('should show João Vitor Campos e Silva with his photo and translated talk without inventing a schedule', () => {
+  it('should show João Vitor Campos e Silva with his photo and include him in the thematic talks', () => {
     const name = 'João Vitor Campos e Silva';
     for (const [language, title] of [
       ['pt', 'Manejo pesqueiro e biodiversidade aquática frente às mudanças globais'],
@@ -51,7 +51,8 @@ describe('Iwppo2026Component', () => {
       expect(card?.querySelector('img')?.getAttribute('src'))
         .toBe('assets/images/iwppo-2026/people/joao-vitor-campos-silva.jpeg');
       expect(component.pageData.speakers.filter(speaker => speaker.name === name).length).toBe(1);
-      expect(component.pageData.schedule.some(day => day.activities.some(activity => activity.speakers.includes(name)))).toBeFalse();
+      const day = component.pageData.schedule.find(entry => entry.date === '2026-11-18');
+      expect(day?.activities[1].speakers).toContain(name);
     }
   });
 
@@ -141,26 +142,22 @@ describe('Iwppo2026Component', () => {
     }
   });
 
-  it('should show the seven moderators on their corresponding activities in every language', () => {
+  it('should show the six moderators from the official program in every language', () => {
     const assignments = [
-      ['2026-11-17', 3, 'Kátia Viana Cavalcante'],
+      ['2026-11-17', 2, 'Kátia Viana Cavalcante'],
       ['2026-11-18', 0, 'Guilherme Silva Modoro'],
       ['2026-11-18', 1, 'Mônica Alves de Vasconcelos'],
-      ['2026-11-18', 5, 'Santiago Linório Ferreyra Ramos'],
-      ['2026-11-18', 6, 'Maria Teresa Gomes Lopes'],
-      ['2026-11-18', 8, 'Francimara Souza da Costa'],
-      ['2026-11-19', 0, 'Jessé Marques'],
+      ['2026-11-18', 4, 'Maria Teresa Gomes Lopes'],
+      ['2026-11-18', 5, 'Francimara Souza da Costa'],
+      ['2026-11-18', 6, 'Santiago Linório Ferreyra Ramos'],
     ] as const;
     for (const language of ['pt', 'en', 'es'] as const) {
       component.setLanguage(language);
       fixture.detectChanges();
-      expect(fixture.nativeElement.querySelectorAll('[data-activity-moderator]').length).toBe(7);
+      expect(fixture.nativeElement.querySelectorAll('[data-activity-moderator]').length).toBe(6);
       for (const [date, index, name] of assignments) {
-        const day = component.pageData.schedule.find(day => day.date === date)!;
-        const activity = day.activities[index];
         const section = fixture.nativeElement.querySelector(`[data-schedule-date="${date}"]`) as HTMLElement;
-        const card = Array.from(section.querySelectorAll('article'))
-          .find(card => card.textContent?.includes(activity.title));
+        const card = section.querySelectorAll('article')[index];
         const moderator = card?.querySelector('[data-activity-moderator]');
         expect(moderator?.textContent).toContain(name);
         expect(moderator?.textContent).toContain(language === 'pt' ? 'Modera' : language === 'en' ? 'Moderator' : 'Modera');
@@ -168,19 +165,18 @@ describe('Iwppo2026Component', () => {
     }
   });
 
-  it('should register the forwarded panel speakers with their photos separately from moderators', () => {
+  it('should show the thematic speakers with their photos separately from moderators', () => {
     for (const language of ['pt', 'en', 'es'] as const) {
       component.setLanguage(language);
       fixture.detectChanges();
-      for (const [index, name, photo] of [
-        [6, 'Genilson Pereira Santana', 'genilson.jpeg'],
-        [8, 'Deivison Carvalho Molinari', 'deivison.jpeg'],
+      for (const [name, photo] of [
+        ['Genilson Pereira Santana', 'genilson.jpeg'],
+        ['Deivison Carvalho Molinari', 'deivison.jpeg'],
       ] as const) {
-        const panel = component.pageData.schedule.find(day => day.date === '2026-11-18')!.activities[index];
+        const panel = component.pageData.schedule.find(day => day.date === '2026-11-18')!.activities[1];
         expect(panel.speakers).toContain(name);
         const speaker = component.pageData.speakers.find(speaker => speaker.name === name);
         expect(speaker?.photo).toBe(`assets/images/iwppo-2026/people/${photo}`);
-        expect(speaker?.talkTitle).toBe(panel.title);
         const image = fixture.nativeElement.querySelector(`#palestrantes img[alt="${name}"]`);
         expect(image?.getAttribute('src')).toBe(speaker?.photo);
       }
