@@ -783,7 +783,8 @@
         },
         {
           "time": "11:00",
-          "title": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções por estudantes de graduação e pós-graduação.",
+          "title": "Apresentações orais dos trabalhos",
+          "presentationNote": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções por estudantes de graduação e pós-graduação.",
           "type": "Sessão técnica",
           "room": "Auditório Central",
           "speakers": [],
@@ -826,7 +827,8 @@
         },
         {
           "time": "16:00",
-          "title": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções por estudantes de graduação e pós-graduação.",
+          "title": "Apresentações orais dos trabalhos",
+          "presentationNote": "Sessão voltada à apresentação de pesquisas inovadoras relacionadas à poluição plástica, seus impactos e possíveis soluções por estudantes de graduação e pós-graduação.",
           "type": "Sessão técnica",
           "room": "Auditório Central",
           "speakers": [],

@@ -784,7 +784,8 @@
         },
         {
           "time": "11:00",
-          "title": "Session for undergraduate and graduate students to present innovative research on plastic pollution, its impacts, and possible solutions.",
+          "title": "Oral research presentations",
+          "presentationNote": "Session for undergraduate and graduate students to present innovative research on plastic pollution, its impacts, and possible solutions.",
           "type": "Technical session",
           "room": "Central Auditorium",
           "speakers": [],
@@ -827,7 +828,8 @@
         },
         {
           "time": "16:00",
-          "title": "Session for undergraduate and graduate students to present innovative research on plastic pollution, its impacts, and possible solutions.",
+          "title": "Oral research presentations",
+          "presentationNote": "Session for undergraduate and graduate students to present innovative research on plastic pollution, its impacts, and possible solutions.",
           "type": "Technical session",
           "room": "Central Auditorium",
           "speakers": [],

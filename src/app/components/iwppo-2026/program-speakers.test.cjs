@@ -34,6 +34,12 @@ for (const language of ['pt', 'en', 'es']) {
     assert.equal(schedule[1].activities[6].moderator.name, 'Santiago Linório Ferreyra Ramos');
     const centralAuditorium = { pt: 'Auditório Central', en: 'Central Auditorium', es: 'Auditorio Central' };
     assert.ok(schedule[2].activities.every(activity => activity.room === centralAuditorium[language]));
+    const oralTitle = schedule[1].activities[2].title;
+    for (const time of ['11:00', '16:00']) {
+      const session = schedule[2].activities.find(activity => activity.time === time);
+      assert.equal(session.title, oralTitle);
+      assert.ok(session.presentationNote?.trim());
+    }
   });
 
   test(`shared profiles show their IWPPO 2025 Lattes links in ${language}`, () => {

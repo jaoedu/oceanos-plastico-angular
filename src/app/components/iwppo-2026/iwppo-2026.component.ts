@@ -32,6 +32,7 @@ interface Activity {
   speakers: string[];
   description: string;
   presentationTitles?: string[];
+  presentationNote?: string;
   moderator?: {
     name: string;
     affiliation: string;

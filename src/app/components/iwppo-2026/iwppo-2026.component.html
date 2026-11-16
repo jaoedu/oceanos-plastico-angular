@@ -854,7 +854,7 @@
                         <li *ngFor="let title of titles; trackBy: trackByText">{{ title }}</li>
                       </ul>
                       <ng-template #pendingPresentationTitles>
-                        <p class="mt-4">{{ pageData.ui.labels.presentationTitlesPending }}</p>
+                        <p class="mt-4">{{ activity.presentationNote || pageData.ui.labels.presentationTitlesPending }}</p>
                       </ng-template>
                     </div>
                   </details>
