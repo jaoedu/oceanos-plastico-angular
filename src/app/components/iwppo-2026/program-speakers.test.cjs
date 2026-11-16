@@ -14,6 +14,10 @@ for (const language of ['pt', 'en', 'es']) {
       assert.ok(!program.includes(name), `${name} must be absent`);
     }
     assert.ok(data.speakers.length > 0);
+    for (const name of ['Alireza Moghayedi', 'Richard James Ladle']) {
+      assert.ok(!data.scientificCommittee.some(member => member.name === name),
+        `${name} must be absent from the scientific committee`);
+    }
     assert.equal(data.schedule.length, 4);
   });
 
@@ -28,5 +32,18 @@ for (const language of ['pt', 'en', 'es']) {
     assert.ok(schedule[1].activities[1].speakers.includes('João Vitor Campos e Silva'));
     assert.equal(schedule[0].activities[2].moderator.name, 'Kátia Viana Cavalcante');
     assert.equal(schedule[1].activities[6].moderator.name, 'Santiago Linório Ferreyra Ramos');
+  });
+
+  test(`shared profiles show their IWPPO 2025 Lattes links in ${language}`, () => {
+    const data = require(`../../../assets/data/iwppo-2026/${language}.json`);
+    for (const [people, name, id] of [
+      [data.organizingCommittee, 'Victoria Camille', '0462311949230820'],
+      [data.organizingCommittee, 'Alessandro Sarmento Cavalcanti', '7440453632345842'],
+      [data.speakers, 'Letícia Anderson', '5902741462403490'],
+      [data.openingPanel.members, 'Prof. Dr. Jessé Marques Júnior', '2811263859126204'],
+    ]) {
+      assert.equal(people.find(person => person.name === name)?.lattes,
+        `https://lattes.cnpq.br/${id}`, name);
+    }
   });
 }

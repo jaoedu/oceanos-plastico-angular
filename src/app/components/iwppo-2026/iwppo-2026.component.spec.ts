@@ -263,6 +263,23 @@ describe('Iwppo2026Component', () => {
     }
   });
 
+  it('should expand presentation titles and show missing details for oral sessions', () => {
+    component.setLanguage('pt');
+    fixture.detectChanges();
+    const day = fixture.nativeElement.querySelector('[data-schedule-date="2026-11-18"]') as HTMLElement;
+    const cards = day.querySelectorAll('article');
+    const details = cards[0].querySelector('details')!;
+    expect(details.open).toBeFalse();
+    details.querySelector('summary')!.click();
+    expect(details.open).toBeTrue();
+    expect(details.textContent).toContain('Microplásticos no bioma Amazônico');
+    expect(details.textContent).toContain('Sala 1');
+    expect(details.textContent).toContain('09:30');
+    const oralDetails = cards[2].querySelector('details')!;
+    expect(oralDetails.textContent).toContain('Títulos dos trabalhos ainda não informados');
+    expect(oralDetails.textContent).toContain('Local a confirmar');
+  });
+
   it('should link the program button to the current route fragment', () => {
     const programLink = fixture.nativeElement.querySelector(
       'a[href$="#programacao"]',

@@ -70,6 +70,10 @@ nos três arquivos de idioma; ao alterá-lo, atualize também os URLs do mapa no
 Para validar os horários de 17 a 19/11 e a retirada de palestrantes nos três idiomas:
 `node --test src/app/components/iwppo-2026/program-speakers.test.cjs`.
 
+Na programação do IWPPO 2026, `presentationTitles` reúne os títulos publicados
+no PDF oficial. Uma lista vazia identifica uma sessão oral cujos títulos ainda
+não foram informados. Os detalhes usam o horário e o local da própria sessão.
+
 Os cards da Aura Amazônia aparecem na atividade de experiências imersivas de
 20/11/2026. Textos e descrições acessíveis ficam em
 `src/assets/data/iwppo-2026/{pt,en,es}.json`, e as artes originais em

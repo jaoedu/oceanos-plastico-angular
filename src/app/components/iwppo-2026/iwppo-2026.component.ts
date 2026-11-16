@@ -31,6 +31,7 @@ interface Activity {
   room: string;
   speakers: string[];
   description: string;
+  presentationTitles?: string[];
   moderator?: {
     name: string;
     affiliation: string;
@@ -215,6 +216,11 @@ interface IwppoPageData {
       thematicAxes: string;
       panAmazonTerritories: string;
       lattes: string;
+      presentationDetails: string;
+      presentationTime: string;
+      presentationLocation: string;
+      presentationLocationPending: string;
+      presentationTitlesPending: string;
       proponentData: string;
       fundingProgram: string;
       call: string;
@@ -256,7 +262,7 @@ interface IwppoPageData {
     description: string;
     searchLabel: string;
     emptyLabel: string;
-    members: Array<{ name: string; role: string; affiliation: string; photo: string }>;
+    members: Array<{ name: string; role: string; affiliation: string; photo: string; lattes?: string }>;
   };
 
   schedule: ScheduleDay[];
@@ -328,6 +334,11 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       thematicAxes: 'Eixos temáticos',
       panAmazonTerritories: 'Países e territórios da Pan-Amazônia',
       lattes: 'Lattes',
+      presentationDetails: 'Ver trabalhos',
+      presentationTime: 'Horário',
+      presentationLocation: 'Local',
+      presentationLocationPending: 'Local a confirmar',
+      presentationTitlesPending: 'Títulos dos trabalhos ainda não informados.',
       proponentData: 'Dados do proponente',
       fundingProgram: 'Programa de apoio',
       call: 'Edital',
@@ -407,6 +418,11 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       thematicAxes: 'Thematic axes',
       panAmazonTerritories: 'Pan-Amazon countries and territories',
       lattes: 'Lattes',
+      presentationDetails: 'View presentations',
+      presentationTime: 'Time',
+      presentationLocation: 'Location',
+      presentationLocationPending: 'Location to be confirmed',
+      presentationTitlesPending: 'Presentation titles have not been announced.',
       proponentData: 'Proponent data',
       fundingProgram: 'Funding program',
       call: 'Call',
@@ -486,6 +502,11 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
       thematicAxes: 'Ejes temáticos',
       panAmazonTerritories: 'Países y territorios de la Panamazonía',
       lattes: 'Lattes',
+      presentationDetails: 'Ver trabajos',
+      presentationTime: 'Horario',
+      presentationLocation: 'Lugar',
+      presentationLocationPending: 'Lugar por confirmar',
+      presentationTitlesPending: 'Los títulos de los trabajos aún no se han anunciado.',
       proponentData: 'Datos del proponente',
       fundingProgram: 'Programa de apoyo',
       call: 'Convocatoria',

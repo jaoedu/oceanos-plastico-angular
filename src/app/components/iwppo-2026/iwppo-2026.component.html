@@ -530,6 +530,10 @@
             <h3 class="text-xl font-black text-[#063A4A] leading-tight">{{ member.name }}</h3>
             <p class="text-[#063A4A] mt-3 leading-relaxed">{{ member.role }}</p>
             <p class="text-sm text-[#9A7600] font-bold mt-3">{{ member.affiliation }}</p>
+            <a *ngIf="member.lattes" [href]="member.lattes" target="_blank" rel="noopener noreferrer"
+              class="inline-flex mt-5 text-sm text-[#0F7F5F] font-black hover:text-[#063A4A] transition">
+              {{ pageData.ui.labels.lattes }} →
+            </a>
           </div>
         </article>
       </div>
@@ -830,6 +834,30 @@
                       {{ name }}
                     </span>
                   </div>
+
+                  <details *ngIf="activity.presentationTitles as titles" class="mt-5 rounded-xl border border-[#E6DDC8]">
+                    <summary class="cursor-pointer rounded-xl px-4 py-3 font-bold text-[#063A4A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#0F7F5F]">
+                      {{ pageData.ui.labels.presentationDetails }}
+                    </summary>
+                    <div class="border-t border-[#E6DDC8] px-4 py-3 text-[#063A4A]">
+                      <dl class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                        <div>
+                          <dt class="font-bold">{{ pageData.ui.labels.presentationTime }}</dt>
+                          <dd>{{ activity.time }}</dd>
+                        </div>
+                        <div>
+                          <dt class="font-bold">{{ pageData.ui.labels.presentationLocation }}</dt>
+                          <dd>{{ activity.room || pageData.ui.labels.presentationLocationPending }}</dd>
+                        </div>
+                      </dl>
+                      <ul *ngIf="titles.length; else pendingPresentationTitles" class="mt-4 list-disc space-y-2 pl-5">
+                        <li *ngFor="let title of titles; trackBy: trackByText">{{ title }}</li>
+                      </ul>
+                      <ng-template #pendingPresentationTitles>
+                        <p class="mt-4">{{ pageData.ui.labels.presentationTitlesPending }}</p>
+                      </ng-template>
+                    </div>
+                  </details>
                 </div>
               </div>
             </article>
