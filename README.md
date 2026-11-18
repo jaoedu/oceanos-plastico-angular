@@ -74,6 +74,16 @@ Na programação do IWPPO 2026, `presentationTitles` reúne os títulos publicad
 no PDF oficial. Uma lista vazia identifica uma sessão oral cujos títulos ainda
 não foram informados. Os detalhes usam o horário e o local da própria sessão.
 
+Os acessos ao Microsoft Teams dos dias 18 e 19/11 ficam em
+`schedule[].activities[].meetingUrl`, nos três idiomas, e aparecem como botões
+“Entrar na sala” na atividade correspondente. Os títulos das palestras ficam
+visíveis acima do botão de acesso, sem expandir “Ver trabalhos”.
+As salas temáticas de 18/11 são
+Restinga e Ajuri, na ordem do documento de links da organização.
+O aviso de acesso online e fuso horário fica em `ui.onlineAccess`.
+Para validar a associação dos 11 links às sessões:
+`node --test src/app/components/iwppo-2026/program-links.test.cjs`.
+
 Os cards da Aura Amazônia aparecem na atividade de experiências imersivas de
 20/11/2026. Textos e descrições acessíveis ficam em
 `src/assets/data/iwppo-2026/{pt,en,es}.json`, e as artes originais em

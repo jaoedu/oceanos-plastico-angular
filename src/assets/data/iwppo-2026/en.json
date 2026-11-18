@@ -648,7 +648,7 @@
           "time": "09:30",
           "title": "IWPPO thematic talks",
           "type": "Panel",
-          "room": "Room 1",
+          "room": "Room Restinga",
           "speakers": [
             "José Eduardo Martinelli Filho",
             "Fabian Sá",
@@ -664,13 +664,14 @@
             "Microplásticos no bioma Amazônico: estado da arte e perspectivas",
             "Ecossistemas Aquáticos Ameaçados: A Relação entre “Lixo” e Vida Marinha",
             "Microplásticos: um problema além da partícula"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2202963704521878?p=yVXnTjTLLqZIYcVKUE"
         },
         {
           "time": "09:30",
           "title": "IWPPO thematic talks",
           "type": "Panel",
-          "room": "Room 2",
+          "room": "Room Ajuri",
           "speakers": [
             "João Vitor Campos e Silva",
             "Genilson Pereira Santana",
@@ -686,7 +687,8 @@
             "Manejo pesqueiro e biodiversidade aquática frente às mudanças globais",
             "Biorremediação, enzimas e startups de bioplásticos",
             "Economia circular aplicada a bacias hidrográficas e oceânicas"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2671054252794857?p=ysjZpBSXoAB2jW66j1"
         },
         {
           "time": "11:00",
@@ -695,7 +697,8 @@
           "room": "",
           "speakers": [],
           "description": "Session for research presentations on plastic pollution.",
-          "presentationTitles": []
+          "presentationTitles": [],
+          "meetingUrl": "https://teams.microsoft.com/meet/2202974642330476?p=Gv8TYtuFlgqgXRdwFm"
         },
         {
           "time": "12:00",
@@ -725,7 +728,8 @@
             "A intersecção entre problemas de saneamento, saúde e criminalidade: macro e microplásticos contaminados na Baía de Santos",
             "Microplásticos no bioma Amazônico: estado da arte e perspectivas",
             "Uso da plataforma Athena na gestão de dados de PPGs na área de ciências do ambiente"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2887306751208644?p=K7ZEkI9qybv4MvnYcC"
         },
         {
           "time": "15:00",
@@ -745,7 +749,8 @@
           "presentationTitles": [
             "Esforços em análise de ciclo de vida para medir o dano das emissões plásticas ao ambiente: inventários e métodos",
             "Sensoramento remoto para detecção de detritos flutuantes"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2945277422254633?p=6FaiVDuxqLglBnGwYT"
         },
         {
           "time": "16:00",
@@ -759,7 +764,8 @@
             "affiliation": "ICET/PPGCASA/UFAM",
             "label": "Moderator"
           },
-          "presentationTitles": []
+          "presentationTitles": [],
+          "meetingUrl": "https://teams.microsoft.com/meet/2227024992883618?p=bFBpISpQWlCDMAjunx"
         }
       ]
     },
@@ -780,7 +786,8 @@
           "presentationTitles": [
             "Os desafios e as perspectivas de pesquisar os efeitos dos microplásticos na gestação",
             "Physical effects on biota of micro- and nanoplastics in the context of plastic waste"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2852038887480504?p=f4bsu6Nj1NkioLEhMC"
         },
         {
           "time": "11:00",
@@ -790,7 +797,8 @@
           "room": "Central Auditorium",
           "speakers": [],
           "description": "Session for research presentations on plastic pollution.",
-          "presentationTitles": []
+          "presentationTitles": [],
+          "meetingUrl": "https://teams.microsoft.com/meet/2800676435830268?p=lgpAwTtqL5eoS8kCql"
         },
         {
           "time": "13:00",
@@ -807,7 +815,8 @@
             "Microfibras: o impacto invisível da moda no oceano",
             "Tratado, treta e plástico: a política por trás da poluição",
             "Do conhecimento à ação: ciência e cooperação atlântica"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2679678682515561?p=0fiHps9M4WuIsxShHt"
         },
         {
           "time": "14:30",
@@ -824,7 +833,8 @@
             "Integrated environmental assessment of concrete incorporating ocean-recovered plastics: Combining LCA, Emergy accounting, and marine biota impacts",
             "Impacts and Implications of Microplastics in Australian Marine and Coastal Systems: Developing Strategies for Management",
             "Beyond the Shoreline: Why the Future of Our Oceans Depends on the Future of Our Cities"
-          ]
+          ],
+          "meetingUrl": "https://teams.microsoft.com/meet/2412232299686263?p=qoa5lWiym6LA6KklBP"
         },
         {
           "time": "16:00",
@@ -834,7 +844,8 @@
           "room": "Central Auditorium",
           "speakers": [],
           "description": "Session for research presentations on plastic pollution.",
-          "presentationTitles": []
+          "presentationTitles": [],
+          "meetingUrl": "https://teams.microsoft.com/meet/2513201057699233?p=RWwHJUPTpvIPirYzZd"
         },
         {
           "time": "17:00",
@@ -950,6 +961,13 @@
       "director": "Director",
       "position": "Position",
       "accessInstitutionalWebsite": "Access institutional website"
+    },
+    "onlineAccess": {
+      "title": "Online access",
+      "description": "Join via Microsoft Teams. Find your session below and select “Join the meeting”.",
+      "join": "Join the meeting",
+      "newTab": "Opens in a new tab.",
+      "timezone": "Times are in Brasília time (UTC−3). Manaus (UTC−4) is one hour behind."
     }
   },
   "openingPanel": {

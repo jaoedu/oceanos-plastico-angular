@@ -273,7 +273,7 @@ describe('Iwppo2026Component', () => {
     details.querySelector('summary')!.click();
     expect(details.open).toBeTrue();
     expect(details.textContent).toContain('Microplásticos no bioma Amazônico');
-    expect(details.textContent).toContain('Sala 1');
+    expect(details.textContent).toContain('Sala Restinga');
     expect(details.textContent).toContain('09:30');
     const oralDetails = cards[2].querySelector('details')!;
     expect(oralDetails.textContent).toContain('Títulos dos trabalhos ainda não informados');
@@ -287,6 +287,43 @@ describe('Iwppo2026Component', () => {
 
     expect(programLink).not.toBeNull();
     expect(programLink?.hash).toBe('#programacao');
+  });
+
+  it('should show accessible Teams links only for sessions with an online room in every language', () => {
+    for (const language of ['pt', 'en', 'es'] as const) {
+      component.setLanguage(language);
+      fixture.detectChanges();
+      const schedule = fixture.nativeElement.querySelector('#programacao') as HTMLElement;
+      const links = schedule.querySelectorAll<HTMLAnchorElement>('a[data-meeting-link]');
+      expect(links.length).toBe(11);
+      expect(schedule.querySelector('[data-schedule-timezone]')?.textContent)
+        .toContain(component.pageData.ui.onlineAccess.timezone);
+      for (const day of component.pageData.schedule) {
+        const cards = schedule.querySelector(`[data-schedule-date="${day.date}"]`)!.querySelectorAll('article');
+        day.activities.forEach((activity, index) => {
+          const link = cards[index].querySelector<HTMLAnchorElement>('a[data-meeting-link]');
+          if (!activity.meetingUrl) {
+            expect(link).toBeNull();
+            return;
+          }
+          expect(link?.getAttribute('href')).toBe(activity.meetingUrl);
+          expect(link?.target).toBe('_blank');
+          expect(link?.rel).toBe('noopener noreferrer');
+          expect(link?.textContent).toContain(component.pageData.ui.onlineAccess.join);
+          expect(link?.textContent).toContain(activity.title);
+          expect(link?.textContent).toContain(activity.time);
+          expect(link?.textContent).toContain(component.pageData.ui.onlineAccess.newTab);
+          const titles = cards[index].querySelector('[data-meeting-titles]');
+          if (activity.presentationTitles?.length) {
+            expect(titles?.closest('details')).toBeNull();
+            expect(titles?.querySelectorAll('li').length).toBe(activity.presentationTitles.length);
+            activity.presentationTitles.forEach(title => expect(titles?.textContent).toContain(title));
+          } else {
+            expect(titles).toBeNull();
+          }
+        });
+      }
+    }
   });
 
   it('should format event dates according to the selected language', () => {

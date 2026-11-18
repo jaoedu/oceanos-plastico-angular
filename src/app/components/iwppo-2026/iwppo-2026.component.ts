@@ -31,6 +31,7 @@ interface Activity {
   room: string;
   speakers: string[];
   description: string;
+  meetingUrl?: string;
   presentationTitles?: string[];
   presentationNote?: string;
   moderator?: {
@@ -162,6 +163,13 @@ interface IwppoPageData {
 
 
   ui: {
+    onlineAccess: {
+      title: string;
+      description: string;
+      join: string;
+      newTab: string;
+      timezone: string;
+    };
     alt: {
       waterTexture: string;
       iwppoLogo: string;
@@ -280,6 +288,7 @@ const submissionUrl = `${registrationUrl}/trabalhos`;
 
 const fallbackUi: Record<Language, IwppoPageData['ui']> = {
   pt: {
+    onlineAccess: ptData.ui.onlineAccess,
     alt: {
       waterTexture: 'Textura de água',
       iwppoLogo: 'Logo IWPPO 2026'
@@ -364,6 +373,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
     }
   },
   en: {
+    onlineAccess: enData.ui.onlineAccess,
     alt: {
       waterTexture: 'Water texture',
       iwppoLogo: 'IWPPO 2026 Logo'
@@ -448,6 +458,7 @@ const fallbackUi: Record<Language, IwppoPageData['ui']> = {
     }
   },
   es: {
+    onlineAccess: esData.ui.onlineAccess,
     alt: {
       waterTexture: 'Textura de agua',
       iwppoLogo: 'Logo IWPPO 2026'
